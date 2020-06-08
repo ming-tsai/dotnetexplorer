@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <div id="content-area" class="page-wrapper hero-body">
       <div id="content" class="content-wrapper">
         <Content>
@@ -13,11 +14,13 @@
 
 <script lang="ts">
 import Footer from "@/components/commons/Footer/Footer.vue";
+import Header from "@/components/commons/Header/Header.vue";
 
 export default {
   name: "Layout",
   components: {
-    Footer
+    Footer,
+    Header
   }
 };
 </script>
