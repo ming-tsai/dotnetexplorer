@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="content-area" class="page-wrapper">
+    <div id="content-area" class="page-wrapper hero-body">
       <div id="content" class="content-wrapper">
         <Content>
           <router-view />

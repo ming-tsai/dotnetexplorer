@@ -1,10 +1,9 @@
 <template>
   <footer
     :class="{
-      'has-background-dark': isDarkTheme,
-      'has-background-light': !isDarkTheme
+      'has-background-dark': isDarkTheme
     }"
-    class="footer hero-footer"
+    class="footer hero-footer has-background-light"
   >
     <div class="content has-text-centered">
       <p
@@ -17,7 +16,7 @@
         Made with
         <b-icon
           style="vertical-align: middle"
-          type="is-info"
+          :type="{ 'is-primary': isDarkTheme, 'is-info': !isDarkTheme }"
           icon="heart"
           size="is-small"
         >
@@ -26,10 +25,21 @@
         <a href="https://github.com/ming-tsai" target="_blank">
           <b-icon
             style="vertical-align: middle"
-            type="is-info"
+            :type="{ 'is-primary': isDarkTheme, 'is-info': !isDarkTheme }"
+            icon="robot"
+            size="is-small"
+          >
+          </b-icon>
+        </a>
+      </p>
+      <p>
+        <a href="https://github.com/ming-tsai/dotnetexplorer" target="_blank">
+          <b-icon
+            style="vertical-align: middle"
+            :type="{ 'is-primary': isDarkTheme, 'is-info': !isDarkTheme }"
             pack="fab"
             icon="github-alt"
-            size="is-small"
+            size="is-size-10"
           >
           </b-icon>
         </a>
