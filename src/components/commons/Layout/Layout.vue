@@ -1,0 +1,35 @@
+<template>
+  <div>
+    <div id="content-area" class="page-wrapper">
+      <div id="content" class="content-wrapper">
+        <Content>
+          <router-view />
+        </Content>
+      </div>
+    </div>
+    <Footer />
+  </div>
+</template>
+
+<script lang="ts">
+import Footer from "@/components/commons/Footer/Footer.vue";
+
+export default {
+  name: "Layout",
+  components: {
+    Footer
+  }
+};
+</script>
+
+<style scoped>
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+</style>
