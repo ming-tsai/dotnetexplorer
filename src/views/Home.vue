@@ -1,15 +1,24 @@
 <template>
-  <div class="home"></div>
+  <div :class="backgroundColor" class="home"></div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { namespace } from "vuex-class";
-const userConfig = namespace("Tools");
+const tool = namespace("Tool");
 @Component
-export default class Footer extends Vue {
-  @userConfig.State
+export default class Home extends Vue {
+  @tool.State
   public isDarkTheme!: boolean;
+
+  @tool.State
+  public textColor!: string;
+
+  @tool.State
+  public backgroundColor!: string;
+
+  @tool.State
+  public iconType!: string;
 }
 </script>
 
