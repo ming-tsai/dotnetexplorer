@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import UserConfig from "@/store/modules/user-config";
+import Tool from "@/store/modules/tool";
 
 Vue.use(Vuex);
 
@@ -9,6 +9,6 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   modules: {
-    UserConfig
+    Tool: Tool
   }
 });
