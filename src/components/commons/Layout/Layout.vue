@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="has-navbar-fixed-top">
     <section :class="backgroundColor" class="hero is-fullheight">
       <Header class="hero-head" />
       <div class="hero-body">
@@ -21,7 +21,7 @@ import Header from "@/components/commons/Header/Header.vue";
 
 const tool = namespace("Tool");
 @Component({
-  components:{
+  components: {
     Footer,
     Header
   }
@@ -40,9 +40,3 @@ export default class Layout extends Vue {
   public iconType!: string;
 }
 </script>
-
-<style scoped>
-.has-navbar-fixed-top .hero.is-fullheight {
-  min-height: calc(100vh - navbar-height);
-}
-</style>
