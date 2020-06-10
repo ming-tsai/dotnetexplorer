@@ -1,11 +1,13 @@
 <template>
   <nav
     :class="backgroundColor"
-    class="navbar has-text-right is-fixed-top"
+    class="navbar level is-fixed-top has-text-right"
     role="navigation"
     aria-label="main navigation"
   >
-    <section>
+    <div class="level-left"></div>
+
+    <div class="level-rigth">
       <b-switch
         :value="isDarkTheme"
         passive-type="is-info"
@@ -14,7 +16,7 @@
       >
         <a :class="textColor">{{ isDarkTheme ? "Dark Mode" : "Light Mode" }}</a>
       </b-switch>
-    </section>
+    </div>
   </nav>
 </template>
 
