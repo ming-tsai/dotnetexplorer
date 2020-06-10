@@ -1,8 +1,8 @@
 <template>
   <div class="has-navbar-fixed-top">
-    <section :class="backgroundColor" class="hero is-fullheight">
-      <Header class="hero-head" />
-      <div class="hero-body">
+    <Header />
+    <section class="hero is-fullheight">
+      <div :class="backgroundColor" class="hero-body">
         <div class="container has-text-centered">
           <router-view />
         </div>

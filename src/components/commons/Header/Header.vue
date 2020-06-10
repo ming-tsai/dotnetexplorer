@@ -1,22 +1,21 @@
 <template>
-  <b-navbar :class="backgroundColor" class="hero-header">
-    <template slot="end">
-      <b-navbar-item tag="div">
-        <section>
-          <b-switch
-            :value="isDarkTheme"
-            passive-type="is-info"
-            class="navbar-item"
-            @input="updateTheme"
-          >
-            <a :class="textColor">{{
-              isDarkTheme ? "Dark Mode" : "Light Mode"
-            }}</a>
-          </b-switch>
-        </section>
-      </b-navbar-item>
-    </template>
-  </b-navbar>
+  <nav
+    :class="backgroundColor"
+    class="navbar has-text-right is-fixed-top"
+    role="navigation"
+    aria-label="main navigation"
+  >
+    <section>
+      <b-switch
+        :value="isDarkTheme"
+        passive-type="is-info"
+        class="navbar-item"
+        @input="updateTheme"
+      >
+        <a :class="textColor">{{ isDarkTheme ? "Dark Mode" : "Light Mode" }}</a>
+      </b-switch>
+    </section>
+  </nav>
 </template>
 
 <script lang="ts">
