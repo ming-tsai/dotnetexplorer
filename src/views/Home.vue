@@ -83,12 +83,12 @@ export default class Home extends Vue {
   @tool.State
   public iconType!: string;
 
-  public selectedSecond = "";
+  public selectedSecond: string | null = null;
 
   public isShowSecond = false;
   public secondOptions: Option[] = [];
   public getSecond(key: string) {
-    this.selectedSecond = "";
+    this.selectedSecond = null;
 
     if (optionsSecond[key] != undefined) {
       this.secondOptions = optionsSecond[key];
