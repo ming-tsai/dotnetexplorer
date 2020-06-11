@@ -1,14 +1,14 @@
 <template>
   <div class="has-navbar-fixed-top">
     <Header />
-    <section class="hero is-fullheight is-fixed-bottom is-fixed-top">
+    <section class="hero is-fullheight">
       <div :class="backgroundColor" class="hero-body">
-        <div class="section is-medium container">
+        <div class="section container">
           <router-view />
         </div>
       </div>
+      <Footer class="footer hero-foot" />
     </section>
-    <Footer class="footer" />
   </div>
 </template>
 
@@ -42,14 +42,6 @@ export default class Layout extends Vue {
 </script>
 
 <style>
-footer {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  z-index: 30;
-}
-
 .hero-body {
   align-items: flex-start !important;
 }
