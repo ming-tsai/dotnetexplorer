@@ -3,7 +3,7 @@
     <Header />
     <section class="hero is-fullheight">
       <div :class="backgroundColor" class="hero-body">
-        <div class="container has-text-centered">
+        <div class="container">
           <router-view />
         </div>
       </div>
