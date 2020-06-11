@@ -32,7 +32,7 @@
         >
           <option
             v-for="option in secondOptions"
-            :value="option.value"
+            :value="option"
             :key="option.value"
           >
             {{ option.label }}
@@ -40,10 +40,10 @@
         </b-select>
       </b-field>
       <b-field v-if="isShowThird" rounded :type="iconType">
-        <b-select expanded placeholder="...">
+        <b-select expanded @input="showCard" placeholder="...">
           <option
             v-for="option in thirdOptions"
-            :value="option.value"
+            :value="option"
             :key="option.value"
           >
             {{ option.label }}
@@ -51,7 +51,30 @@
         </b-select>
       </b-field>
     </div>
-    <div class="column"></div>
+    <div class="column">
+      <br />
+      <div v-if="selectedUsage">
+        <h1 :class="textColor">Usage:</h1>
+        <div class="tile">
+          <div class="tile is-child notification is-dark" :style="cardStyle">
+            <p class="has-text-weight-medium is-family-code">
+              {{ selectedUsage }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div v-if="selectedNote">
+        <h1 :class="textColor">Note:</h1>
+        <div class="tile">
+          <div class="tile is-child notification is-dark" :style="cardStyle">
+            <p class="has-text-weight-medium is-family-code">
+              {{ selectedNote }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -83,8 +106,12 @@ export default class Home extends Vue {
   @tool.State
   public iconType!: string;
 
-  public selectedSecond: string | null = null;
+  @tool.State
+  public cardStyle!: { [key: string]: string };
 
+  public selectedSecond: string | null = null;
+  public selectedUsage: string | null = null;
+  public selectedNote: string | null = null;
   public isShowSecond = false;
   public secondOptions: Option[] = [];
   public getSecond(key: string) {
@@ -98,16 +125,39 @@ export default class Home extends Vue {
     }
 
     this.isShowThird = false;
+    this.showCard();
   }
 
   public isShowThird = false;
   public thirdOptions: Option[] = [];
-  public getThird(key: string) {
-    if (optionsThird[key] != undefined) {
-      this.thirdOptions = optionsThird[key];
+  public getThird(option: Option) {
+    if (optionsThird[option.value] != undefined) {
+      this.thirdOptions = optionsThird[option.value];
       this.isShowThird = true;
     } else {
       this.isShowThird = false;
+    }
+    this.showCard(option);
+  }
+
+  public showCard(option: Option | null = null) {
+    this.showUsage(option);
+    this.showNote(option);
+  }
+
+  private showUsage(option: Option | null = null) {
+    if (option != null && option.usage != null) {
+      this.selectedUsage = option.usage;
+    } else {
+      this.selectedUsage = null;
+    }
+  }
+
+  private showNote(option: Option | null = null) {
+    if (option != null && option.note != null) {
+      this.selectedNote = option.note;
+    } else {
+      this.selectedNote = null;
     }
   }
 }
