@@ -32,7 +32,7 @@ export const options: { [key: string]: Option[] } = {
     },
     {
       value: "webapi",
-      label: "api project project",
+      label: "Api project",
       usage: "dotnet new webapi [-lang {C#|F#}]",
       note:
         "argument lang is optional and not valid for some templates but allows to specify the language of the template to create e.g. 'dotnet new webapi -lang C#'"
