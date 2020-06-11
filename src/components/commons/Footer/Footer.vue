@@ -5,7 +5,7 @@
         Made with
         <b-icon
           style="vertical-align: middle"
-          :type="iconType"
+          type="is-danger"
           icon="heart"
           size="is-small"
         >
