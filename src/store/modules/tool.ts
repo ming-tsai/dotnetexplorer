@@ -6,12 +6,12 @@ class Tool extends VuexModule {
   public textColor = "has-text-dark";
   public backgroundColor = "has-background-light";
   public iconType = "is-info";
-  public cardStyle: { [key: string]: string }= {
-    "border-left" : "10px solid",
-    "border-left-color" : "#167DF0",
-    "border-radius" : "10px",
-    "background-color" : "#20252d"
-  }
+  public cardStyle: { [key: string]: string } = {
+    "border-left": "10px solid",
+    "border-left-color": "#167DF0",
+    "border-radius": "10px",
+    "background-color": "#20252d"
+  };
 
   @Mutation
   public setTheme(isDark: boolean): void {
