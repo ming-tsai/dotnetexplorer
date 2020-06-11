@@ -1,5 +1,5 @@
 <template>
-  <footer :class="backgroundColor" class="footer hero-footer">
+  <footer :class="backgroundColor">
     <div class="content has-text-centered">
       <p :class="textColor" class="is-size-7">
         Made with
