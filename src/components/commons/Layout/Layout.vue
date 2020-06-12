@@ -19,7 +19,7 @@ import { namespace } from "vuex-class";
 import Footer from "@/components/commons/Footer/Footer.vue";
 import Header from "@/components/commons/Header/Header.vue";
 
-const tool = namespace("Tool");
+const Theme = namespace("Theme");
 @Component({
   components: {
     Footer,
@@ -27,16 +27,16 @@ const tool = namespace("Tool");
   }
 })
 export default class Layout extends Vue {
-  @tool.State
+  @Theme.State
   public isDarkTheme!: boolean;
 
-  @tool.State
+  @Theme.State
   public textColor!: string;
 
-  @tool.State
+  @Theme.State
   public backgroundColor!: string;
 
-  @tool.State
+  @Theme.State
   public iconType!: string;
 }
 </script>
