@@ -2,7 +2,7 @@ import { Component, Vue } from "vue-property-decorator";
 import { namespace } from "vuex-class";
 import { optionsFirst, optionsSecond, optionsThird } from "@/data/index";
 import { Option } from "@/data/option";
-const VueTyper = require('vue-typer').VueTyper
+const VueTyper = require("vue-typer").VueTyper;
 const theme = namespace("Theme");
 @Component({
   data() {
