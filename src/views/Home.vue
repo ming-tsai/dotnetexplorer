@@ -10,7 +10,7 @@
       <p :class="textColor">
         Find out the command you need without searching on the web
       </p>
-      <h4><strong>I want to:</strong></h4>
+      <h4><strong :class="textColor">I want to:</strong></h4>
       <b-field :type="iconType">
         <b-select @input="getSecond" expanded placeholder="...">
           <option
