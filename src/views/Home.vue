@@ -83,7 +83,7 @@ import { Component, Vue } from "vue-property-decorator";
 import { namespace } from "vuex-class";
 import { optionsFirst, optionsSecond, optionsThird } from "@/data/index";
 import { Option } from "@/data/option";
-const tool = namespace("Tool");
+const Theme = namespace("Theme");
 @Component({
   data() {
     return {
@@ -94,19 +94,19 @@ const tool = namespace("Tool");
   }
 })
 export default class Home extends Vue {
-  @tool.State
+  @Theme.State
   public isDarkTheme!: boolean;
 
-  @tool.State
+  @Theme.State
   public textColor!: string;
 
-  @tool.State
+  @Theme.State
   public backgroundColor!: string;
 
-  @tool.State
+  @Theme.State
   public iconType!: string;
 
-  @tool.State
+  @Theme.State
   public cardStyle!: { [key: string]: string };
 
   public selectedSecond: string | null = null;

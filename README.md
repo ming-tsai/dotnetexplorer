@@ -1,6 +1,8 @@
 # DotNet Explorer
-
-![Heroku](https://heroku-badge.herokuapp.com/?app=dotnetexplorer)
+| Environment | Status |
+|---|---|
+| Heroku prod  | ![Heroku](https://heroku-badge.herokuapp.com/?app=dotnetexplorer)  |
+| Heroku dev  | ![Heroku](https://heroku-badge.herokuapp.com/?app=dotnetexplorer-dev)  |
 
 ## Table of Contents
 - [Intro](#intro)

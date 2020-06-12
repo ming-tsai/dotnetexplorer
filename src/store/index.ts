@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import Tool from "@/store/modules/tool";
+import Theme from "@/store/modules/theme";
 
 Vue.use(Vuex);
 
@@ -9,6 +9,6 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   modules: {
-    Tool: Tool
+    Theme: Theme
   }
 });

@@ -1,7 +1,7 @@
 import { VuexModule, Module, Mutation, Action } from "vuex-module-decorators";
 
 @Module({ namespaced: true })
-class Tool extends VuexModule {
+class Theme extends VuexModule {
   public isDarkTheme = false;
   public textColor = "has-text-dark";
   public backgroundColor = "has-background-light";
@@ -31,4 +31,4 @@ class Tool extends VuexModule {
   }
 }
 
-export default Tool;
+export default Theme;
