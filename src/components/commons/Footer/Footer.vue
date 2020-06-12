@@ -36,26 +36,5 @@
   </footer>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import { namespace } from "vuex-class";
-const Theme = namespace("Theme");
-@Component
-export default class Footer extends Vue {
-  @Theme.State
-  public isDarkTheme!: boolean;
-
-  @Theme.State
-  public textColor!: string;
-
-  @Theme.State
-  public backgroundColor!: string;
-
-  @Theme.State
-  public iconType!: string;
-}
-</script>
-
-<style scoped>
-@import url("./Footer.css");
-</style>
+<script lang="ts" src="./Footer.ts"></script>
+<style scoped src="./Footer.css"></style>
