@@ -12,7 +12,7 @@
       </p>
       <h4><strong :class="textColor">I want to:</strong></h4>
       <b-field :type="iconType">
-        <b-select @input="getSecond" expanded placeholder="...">
+        <b-select @input="filterSecond" expanded placeholder="...">
           <option
             v-for="option in optionsFirst"
             :value="option.value"
@@ -60,14 +60,17 @@
             class="tile is-child notification is-dark columns is-mobile"
             :style="cardStyle"
           >
-            <p
-              id="usage"
+            <div
               class="has-text-weight-medium is-family-code column"
               style="padding-left: 0px;"
             >
-              {{ selectedUsage }}
-            </p>
-            <div class="column is-1 copy-content">
+              <vue-typer
+                :text="selectedUsage"
+                :repeat="0"
+                :typeDelay="1"
+              ></vue-typer>
+            </div>
+            <div class="column is-1 is-vcentered">
               <a
                 v-clipboard="selectedUsage"
                 v-clipboard:success="clipboardSuccessHandler"
@@ -83,9 +86,13 @@
         <h1 :class="textColor">Note:</h1>
         <div class="tile">
           <div class="tile is-child notification is-dark" :style="cardStyle">
-            <p class="has-text-weight-medium has-text-justified	is-family-code">
-              {{ selectedNote }}
-            </p>
+            <div
+              class="has-text-weight-medium is-family-code"
+              style="padding-left: 0px;"
+            >
+              <vue-typer :text="selectedNote" :repeat="0" :typeDelay="1">
+              </vue-typer>
+            </div>
           </div>
         </div>
       </div>
@@ -94,4 +101,4 @@
 </template>
 
 <script lang="ts" src="./Home.ts"></script>
-<style scoped src="./Home.css"></style>
+<style src="./Home.css"></style>
