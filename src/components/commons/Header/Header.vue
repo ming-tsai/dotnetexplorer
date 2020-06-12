@@ -23,22 +23,22 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { namespace } from "vuex-class";
-const tool = namespace("Tool");
+const Theme = namespace("Theme");
 @Component
 export default class Header extends Vue {
-  @tool.State
+  @Theme.State
   public isDarkTheme!: boolean;
 
-  @tool.State
+  @Theme.State
   public textColor!: string;
 
-  @tool.State
+  @Theme.State
   public backgroundColor!: string;
 
-  @tool.State
+  @Theme.State
   public iconType!: string;
 
-  @tool.Action
+  @Theme.Action
   public updateTheme!: (isDark: boolean) => Promise<boolean>;
 }
 </script>
