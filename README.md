@@ -13,11 +13,11 @@
 - [License](#license)
 - [Customize configuration](#customize-configuration)
 ## Intro
-Recently, I am learning about Vuejs and Typescript, so I want to create a project using my knowledge of these scripting languages and
-my friend [Manuel Cepeda](https://github.com/mecm1993) created his project about [DockerExplorer](https://dockerexplorer.now.sh/), so I was inspired by it.
+Recently, I was learning about Vuejs and Typescript, so I was fascinated to create my own project using these scripting languages and I was inspired by my friend [Manuel Cepeda](https://github.com/mecm1993) his project about [DockerExplorer](https://dockerexplorer.now.sh/).
 
 I was guiding with [Summitech's](https://github.com/summitech) [GitExplorer](https://gitexplorer.com/) and [Michaël Fery's](https://github.com/michaelfery) [DotNetExplorer](http://dotnetexplorer.com/).
 
+Finally, a big shout-out to [Francisco Hernández](https://github.com/franciscoh017) for helping me and guiding me in the use of the Buefy component.
 ## Prerequisites
 - [Node](https://nodejs.org/en/)
 
