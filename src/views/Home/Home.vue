@@ -56,10 +56,25 @@
       <div v-if="selectedUsage">
         <h1 :class="textColor">Usage:</h1>
         <div class="tile">
-          <div class="tile is-child notification is-dark" :style="cardStyle">
-            <p class="has-text-weight-medium is-family-code">
+          <div
+            class="tile is-child notification is-dark columns is-mobile"
+            :style="cardStyle"
+          >
+            <p
+              id="usage"
+              class="has-text-weight-medium is-family-code column"
+              style="padding-left: 0px;"
+            >
               {{ selectedUsage }}
             </p>
+            <div class="column is-1 copy-content">
+              <a
+                v-clipboard="selectedUsage"
+                v-clipboard:success="clipboardSuccessHandler"
+              >
+                <b-icon type="is-light" pack="far" icon="copy"> </b-icon>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -68,7 +83,7 @@
         <h1 :class="textColor">Note:</h1>
         <div class="tile">
           <div class="tile is-child notification is-dark" :style="cardStyle">
-            <p class="has-text-weight-medium is-family-code">
+            <p class="has-text-weight-medium has-text-justified	is-family-code">
               {{ selectedNote }}
             </p>
           </div>
@@ -79,3 +94,4 @@
 </template>
 
 <script lang="ts" src="./Home.ts"></script>
+<style scoped src="./Home.css"></style>

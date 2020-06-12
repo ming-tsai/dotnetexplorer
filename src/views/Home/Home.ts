@@ -33,6 +33,7 @@ export default class Home extends Vue {
   public selectedNote: string | null = null;
   public isShowSecond = false;
   public secondOptions: Option[] = [];
+
   public getSecond(key: string) {
     this.selectedSecond = null;
 
@@ -50,7 +51,7 @@ export default class Home extends Vue {
   public isShowThird = false;
   public thirdOptions: Option[] = [];
   public getThird(option: Option) {
-    if (optionsThird[option.value] != undefined) {
+    if (option.usage == null && optionsThird[option.value] != undefined) {
       this.thirdOptions = optionsThird[option.value];
       this.isShowThird = true;
     } else {
@@ -78,5 +79,13 @@ export default class Home extends Vue {
     } else {
       this.selectedNote = null;
     }
+  }
+
+  public clipboardSuccessHandler() {
+    this.$buefy.toast.open({
+      message: "Code copied!!",
+      type: this.iconType,
+      position: "is-bottom-right"
+    });
   }
 }
