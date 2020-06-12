@@ -1,0 +1,13 @@
+.copy-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vue-typer {
+  font-family: inherit !important;
+}
+
+.vue-typer .custom.char {
+  color: inherit !important;
+}

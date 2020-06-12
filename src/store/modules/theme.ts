@@ -13,8 +13,13 @@ class Theme extends VuexModule {
     "background-color": "#20252d"
   };
 
+  @Action
+  public updateTheme(isDark: boolean): void {
+    this.context.commit("setTheme", isDark);
+  }
+
   @Mutation
-  public setTheme(isDark: boolean): void {
+  private setTheme(isDark: boolean): void {
     this.isDarkTheme = isDark;
     this.textColor = isDark ? "has-text-light" : "has-text-dark";
     this.backgroundColor = isDark
@@ -23,11 +28,6 @@ class Theme extends VuexModule {
     this.iconType = isDark ? "is-primary" : "is-info";
     this.cardStyle["border-left-color"] = isDark ? "#7957d5e6" : "#167DF0";
     this.cardStyle["background-color"] = isDark ? "#ffffff33" : "#20252d";
-  }
-
-  @Action
-  public updateTheme(isDark: boolean): void {
-    this.context.commit("setTheme", isDark);
   }
 }
 

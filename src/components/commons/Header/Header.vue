@@ -20,25 +20,4 @@
   </nav>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import { namespace } from "vuex-class";
-const Theme = namespace("Theme");
-@Component
-export default class Header extends Vue {
-  @Theme.State
-  public isDarkTheme!: boolean;
-
-  @Theme.State
-  public textColor!: string;
-
-  @Theme.State
-  public backgroundColor!: string;
-
-  @Theme.State
-  public iconType!: string;
-
-  @Theme.Action
-  public updateTheme!: (isDark: boolean) => Promise<boolean>;
-}
-</script>
+<script lang="ts" src="./Header.ts"></script>
