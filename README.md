@@ -1,4 +1,7 @@
 # DotNet Explorer
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![version badge](https://img.shields.io/badge/version-v0.1.1-blue.svg)](https://shields.io/)
+
 | Environment | Status |
 |---|---|
 | Heroku prod  | ![Heroku](https://heroku-badge.herokuapp.com/?app=dotnetexplorer)  |
