@@ -11,7 +11,7 @@ class Theme extends VuexModule {
     "border-left-color": "#167DF0",
     "border-radius": "10px",
     "background-color": "#20252d",
-    "transition" : "all 1s ease-in-out"
+    transition: "all 1s ease-in-out"
   };
 
   @Action
