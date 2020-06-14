@@ -21,3 +21,4 @@
 </template>
 
 <script lang="ts" src="./Header.ts"></script>
+<style src="./Header.css" scoped></style>
