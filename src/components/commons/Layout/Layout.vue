@@ -13,4 +13,4 @@
 </template>
 
 <script lang="ts" src="./Layout.ts"></script>
-<style src="./Layout.css" scoped></style>
+<style src="./Layout.css"></style>
