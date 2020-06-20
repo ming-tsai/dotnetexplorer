@@ -9,7 +9,7 @@ import Buefy from "buefy";
 import "buefy/dist/buefy.css";
 
 import Clipboard from "v-clipboard";
-
+import VueTypeText from "vue-type-text";
 // Icon components
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -29,7 +29,7 @@ Vue.use(Buefy, {
 });
 
 Vue.use(Clipboard);
-
+Vue.use(VueTypeText);
 // Vue setting
 Vue.config.productionTip = false;
 new Vue({
