@@ -64,11 +64,7 @@
               class="has-text-weight-medium is-family-code column"
               style="padding-left: 0px;"
             >
-              <vue-typer
-                :text="selectedUsage"
-                :repeat="0"
-                :typeDelay="1"
-              ></vue-typer>
+              <vue-type-text :text="selectedUsage" :timeTakes="3000" />
             </div>
             <div class="column is-1 is-vcentered">
               <a
@@ -90,8 +86,7 @@
               class="has-text-weight-medium is-family-code"
               style="padding-left: 0px;"
             >
-              <vue-typer :text="selectedNote" :repeat="0" :typeDelay="1">
-              </vue-typer>
+              <vue-type-text :text="selectedNote" :timeTakes="3000" />
             </div>
           </div>
         </div>
