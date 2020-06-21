@@ -9,9 +9,7 @@ const options: Option[] = [
   { value: "clean", label: "clean" },
   { value: "run", label: "run" },
   { value: "publish", label: "publish" }
-];
-
-export const primaryOptions = options.sort((x, y) => {
+].sort((x, y) => {
   let result = 0;
   if (x.value < y.value) {
     result = -1;
@@ -21,3 +19,5 @@ export const primaryOptions = options.sort((x, y) => {
   }
   return result;
 });
+
+export const primaryOptions = options;
