@@ -1,0 +1,20 @@
+{
+    "name": ".Net cli Explorer",
+    "description": "Find out the dotnet command you need without searching on the web",
+    "repository": "https://github.com/ming-tsai/dotnetexplorer",
+    "logo": "https://raw.githubusercontent.com/ming-tsai/dotnetexplorer/develop/public/dotNetExplorer.png",
+    "keywords": [
+        "dotnet",
+        "vue",
+        "vuejs",
+        "dotnet cli"
+    ],
+    "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+        },
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-static"
+        }
+    ]
+}
