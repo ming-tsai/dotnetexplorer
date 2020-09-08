@@ -9,6 +9,6 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   modules: {
-    Theme: Theme
-  }
+    Theme: Theme,
+  },
 });

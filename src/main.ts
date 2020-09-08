@@ -25,7 +25,7 @@ Vue.component("vue-fontawesome", FontAwesomeIcon);
 Vue.use(Buefy, {
   defaultIconComponent: "vue-fontawesome",
   defaultIconPack: "fas",
-  defaultContainerElement: "app"
+  defaultContainerElement: "app",
 });
 
 Vue.use(Clipboard);
@@ -35,5 +35,5 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");

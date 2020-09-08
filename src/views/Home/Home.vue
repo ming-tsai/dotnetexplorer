@@ -62,7 +62,7 @@
           >
             <div
               class="has-text-weight-medium is-family-code column"
-              style="padding-left: 0px;"
+              style="padding-left: 0px"
             >
               <vue-type-text :text="selectedUsage" :timeTakes="3000" />
             </div>
@@ -84,7 +84,7 @@
           <div class="tile is-child notification is-dark" :style="cardStyle">
             <div
               class="has-text-weight-medium is-family-code"
-              style="padding-left: 0px;"
+              style="padding-left: 0px"
             >
               <vue-type-text :text="selectedNote" :timeTakes="3000" />
             </div>

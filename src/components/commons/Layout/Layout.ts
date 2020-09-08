@@ -8,8 +8,8 @@ const theme = namespace("Theme");
 @Component({
   components: {
     Footer,
-    Header
-  }
+    Header,
+  },
 })
 export default class Layout extends Vue {
   @theme.State
