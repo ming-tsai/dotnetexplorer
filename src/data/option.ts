@@ -1,6 +1,6 @@
 export class Option {
-    value : string = '';
-    label : string = '';
-    usage? : string;
-    note? : string;
+  value = "";
+  label = "";
+  usage?: string;
+  note?: string;
 }

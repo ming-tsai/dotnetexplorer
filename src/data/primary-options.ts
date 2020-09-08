@@ -8,7 +8,7 @@ const options: Option[] = [
   { value: "restore", label: "restore" },
   { value: "clean", label: "clean" },
   { value: "run", label: "run" },
-  { value: "publish", label: "publish" }
+  { value: "publish", label: "publish" },
 ].sort((x, y) => {
   let result = 0;
   if (x.value < y.value) {

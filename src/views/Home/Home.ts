@@ -8,9 +8,9 @@ const theme = namespace("Theme");
     return {
       optionsFirst,
       optionsSecond,
-      optionsThird
+      optionsThird,
     };
-  }
+  },
 })
 export default class Home extends Vue {
   @theme.State
@@ -34,7 +34,7 @@ export default class Home extends Vue {
   public isShowSecond = false;
   public secondOptions: Option[] = [];
 
-  public filterSecond(key: string) {
+  public filterSecond(key: string): void {
     this.selectedSecond = null;
 
     if (optionsSecond[key] != undefined) {
@@ -50,7 +50,7 @@ export default class Home extends Vue {
 
   public isShowThird = false;
   public thirdOptions: Option[] = [];
-  public getThird(option: Option) {
+  public getThird(option: Option): void {
     if (option.usage == null && optionsThird[option.value] != undefined) {
       this.thirdOptions = optionsThird[option.value];
       this.isShowThird = true;
@@ -60,12 +60,12 @@ export default class Home extends Vue {
     this.showCard(option);
   }
 
-  public showCard(option: Option | null = null) {
+  public showCard(option: Option | null = null): void {
     this.showUsage(option);
     this.showNote(option);
   }
 
-  private showUsage(option: Option | null = null) {
+  private showUsage(option: Option | null = null): void {
     if (option != null && option.usage != null) {
       this.selectedUsage = option.usage;
     } else {
@@ -73,7 +73,7 @@ export default class Home extends Vue {
     }
   }
 
-  private showNote(option: Option | null = null) {
+  private showNote(option: Option | null = null): void {
     if (option != null && option.note != null) {
       this.selectedNote = option.note;
     } else {
@@ -81,11 +81,11 @@ export default class Home extends Vue {
     }
   }
 
-  public clipboardSuccessHandler() {
+  public clipboardSuccessHandler(): void {
     this.$buefy.toast.open({
       message: "Code copied!!",
       type: this.iconType,
-      position: "is-bottom-right"
+      position: "is-bottom-right",
     });
   }
 }
