@@ -1,7 +1,7 @@
 # DotNet Explorer
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-[![version badge](https://img.shields.io/badge/version-v0.1.1-blue.svg)](https://shields.io/)
+[![version badge](https://img.shields.io/badge/version-v1.0.2-blue.svg)](https://shields.io/)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ming-tsai_dotnetexplorer&metric=alert_status)](https://sonarcloud.io/dashboard?id=ming-tsai_dotnetexplorer)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ming-tsai/dotnetexplorer/tree/master)
