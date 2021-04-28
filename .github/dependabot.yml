@@ -1,0 +1,26 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "09:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - ming-tsai
+  ignore:
+  - dependency-name: "@typescript-eslint/parser"
+    versions:
+    - 4.20.0
+  - dependency-name: "@fortawesome/fontawesome-svg-core"
+    versions:
+    - 1.2.35
+  - dependency-name: "@fortawesome/free-brands-svg-icons"
+    versions:
+    - 5.15.3
+  - dependency-name: "@fortawesome/free-regular-svg-icons"
+    versions:
+    - 5.15.3
+  - dependency-name: "@fortawesome/free-solid-svg-icons"
+    versions:
+    - 5.15.3
